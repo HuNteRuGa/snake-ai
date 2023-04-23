@@ -44,8 +44,10 @@ export class AI {
       // console.log({ direction, aiResult });
 
       if (direction >= 4) {
+        this.score += REWARDS.invalidOutput;
         direction = 3;
       } else if (direction < 0) {
+        this.score += REWARDS.invalidOutput;
         direction = 0;
       }
 
