@@ -40,12 +40,13 @@ export class AI {
         game.prevDirection === 'left' ? 1 : 0,
       ]);
 
-      const direction = Math.floor(aiResult);
+      let direction = Math.floor(aiResult);
       // console.log({ direction, aiResult });
 
-      if (direction >= 4 || direction < 0) {
-        score -= 200;
-        return score;
+      if (direction >= 4) {
+        direction = 3;
+      } else if (direction < 0) {
+        direction = 0;
       }
 
       const { prevHeedPosition, currentHeadPosition, foodEaten, snakeAlive } = game.move(direction);
