@@ -1,6 +1,6 @@
 import { MAP_SIZE } from "../../settings.mjs";
 
-export const generateAppleCoordinates = (snakeCoordinates) => {
+export const generateAppleCoordinates = (snakeCoordinates, disableX) => {
   let newCoordinates;
   let match;
   do {
@@ -9,7 +9,7 @@ export const generateAppleCoordinates = (snakeCoordinates) => {
     const y = Math.floor(Math.random() * MAP_SIZE[1]);
     newCoordinates = [x, y];
     // Check if new coordinates match any of the original ones
-    match = snakeCoordinates.some((coord) => coord[0] === x && coord[1] === y);
+    match = snakeCoordinates.some((coord) => coord[0] === x && coord[1] === y) && coord[0] === disableX;
   } while (match);
   return newCoordinates;
 }
