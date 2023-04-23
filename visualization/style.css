@@ -1,0 +1,30 @@
+.snake {
+  margin: 40px 0 0 40px;
+  width: 300px;
+  height: 300px;
+  border: solid 2px black;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.snake__block {
+  width: 10px;
+  height: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.snake__block--none {
+  background: transparent;
+}
+
+.snake__block--food {
+  background: green;
+}
+
+.snake__block--snake {
+  background: darkblue;
+}
