@@ -7,7 +7,7 @@ import { AI } from "./ai/helpers/ai.mjs";
 import { generateRandomWeights } from "./ai/helpers/helpers/generateRandomWeights.mjs";
 import { regenerateRandomWeights } from "./ai/helpers/helpers/regenerateRandomWeights.mjs";
 import { Game } from "./game/game.mjs";
-import { FILTER_IN_GENERATION, GENERATIONS_COUNT, MULTIPLE_BY_GENERATION, SAVE_NAME, START_COUNT } from "./settings.mjs";
+import { FILTER_IN_GENERATION, GENERATIONS_COUNT, MULTIPLE_BY_GENERATION, SAVE_NAME, START_COUNT, SAVE_INTERVAL } from "./settings.mjs";
 
 const args = yargs(process.argv).argv;
 
