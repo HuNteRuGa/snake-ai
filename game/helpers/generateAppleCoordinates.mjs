@@ -9,7 +9,7 @@ export const generateAppleCoordinates = (snakeCoordinates, disableX) => {
     const y = Math.floor(Math.random() * MAP_SIZE[1]);
     newCoordinates = [x, y];
     // Check if new coordinates match any of the original ones
-    match = snakeCoordinates.some((coord) => coord[0] === x && coord[1] === y) && x === disableX;
+    match = snakeCoordinates.some((coord) => coord[0] === x && coord[1] === y) || x === disableX;
   } while (match);
   return newCoordinates;
 }
