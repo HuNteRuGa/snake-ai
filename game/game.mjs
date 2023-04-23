@@ -14,7 +14,7 @@ export class Game {
   }
 
   createFood() {
-    this.food = generateAppleCoordinates(this.snake, this.food ? undefined : this.snake[0][0]);
+    this.food = generateAppleCoordinates(this.snake, this.food ? undefined : this.snake[0][1]);
 
     this.foodStory.push(JSON.parse(JSON.stringify(this.food)));
   }
